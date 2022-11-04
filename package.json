@@ -1,0 +1,23 @@
+{
+  "name": "who-owns-the-homes-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmike245/who-owns-the-homes-backend.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmike245/who-owns-the-homes-backend/issues"
+  },
+  "homepage": "https://github.com/vmike245/who-owns-the-homes-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
