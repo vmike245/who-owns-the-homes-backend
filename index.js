@@ -5,8 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use((_, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'vmike245.github.io/*');
-  res.header('Access-Control-Allow-Origin', 'localhost');
+  res.setHeader('Access-Control-Allow-Origin', 'https://vmike245.github.io/*');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   next();
 });
 
