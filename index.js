@@ -2,7 +2,13 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
+
+app.use((_, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'vmike245.github.io/*');
+  res.header('Access-Control-Allow-Origin', 'localhost');
+  next();
+});
 
 const landlordDataMap = {
   2021: 'data-for-2021.json',
