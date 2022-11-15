@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use((_, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://vmike245.github.io');
-  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   return next();
 });
 
