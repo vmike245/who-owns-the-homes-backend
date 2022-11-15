@@ -4,22 +4,9 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-const HOSTED_WEBSITE_URL = 'https://vmike245.github.io';
-const LOCAL_DEVELOPMENT_PORT = 3000;
-const ALLOWED_HOSTS = [
-  `http://localhost:${LOCAL_DEVELOPMENT_PORT}`,
-  HOSTED_WEBSITE_URL,
-];
-
-app.use(({ hostname, protocol }, res, next) => {
-  const origin = `${protocol}://${hostname}${
-    hostname === 'localhost' ? `:${LOCAL_DEVELOPMENT_PORT}` : ''
-  }`;
-  console.log(origin);
-  res.setHeader(
-    'Access-Control-Allow-Origin',
-    ALLOWED_HOSTS.includes(origin) ? origin : HOSTED_WEBSITE_URL
-  );
+app.use((_, res, next) => {
+  // This should be more restrictive, hopefully it doesn't come back to bite me
+  res.setHeader('Access-Control-Allow-Origin', '*');
   return next();
 });
 
