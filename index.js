@@ -4,9 +4,14 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use((_, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://vmike245.github.io');
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+const HOSTED_WEBSITE_URL = 'https://vmike245.github.io';
+const ALLOWED_HOSTS = ['http://localhost', HOSTED_WEBSITE_URL];
+app.use(({ hostname, protocol }, res, next) => {
+  const origin = `${protocol}://${hostname}`;
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    ALLOWED_HOSTS.includes(origin) ? origin : HOSTED_WEBSITE_URL
+  );
   return next();
 });
 
