@@ -1,0 +1,17 @@
+{
+  "totalParcels": 233950,
+  "outOfStateAndTrustAndLLCAndMultiParcelOwner": 0,
+  "inStateAndTrustAndLLCAndMultiParcelOwner": 199,
+  "outOfStateAndLLCAndMultiParcelOwner": 1469,
+  "inStateAndLLCAndMultiParcelOwner": 9129,
+  "outOfStateAndTrustAndMultiParcelOwner": 340,
+  "inStateAndTrustAndMultiParcelOwner": 2423,
+  "outOfStateAndTrustAndLLC": 5,
+  "inStateAndTrustAndLLC": 22,
+  "outOfStateAndTrust": 1076,
+  "inStateAndTrust": 8672,
+  "outOfStateAndLLC": 1353,
+  "inStateAndLLC": 9687,
+  "outOfStateAndMultiParcelOwner": 3574,
+  "inStateAndMultiParcelOwner": 34031
+}

@@ -10,19 +10,11 @@ app.use((_, res, next) => {
   return next();
 });
 
-const landlordDataMap = {
-  2021: 'data-for-2021.json',
-  2022: 'data-for-2022.json',
-};
-
 app.get('/landlords/:year', (req, res) => {
   const { year } = req.params;
   const { minimumProperties } = req.query;
   const fileData = JSON.parse(
-    fs.readFileSync(
-      path.join(__dirname, `data/${landlordDataMap[year]}`),
-      'utf-8'
-    )
+    fs.readFileSync(path.join(__dirname, `data/${year}/data.json`), 'utf-8')
   );
   const propertiesToReturn = !minimumProperties
     ? fileData
@@ -34,6 +26,18 @@ app.get('/landlords/:year', (req, res) => {
     .status(200)
     .set('Content-Type', 'application/json')
     .send(propertiesToReturn);
+});
+
+app.get('/landlords/:year/breakdown', (req, res) => {
+  const { year } = req.params;
+  const fileData = JSON.parse(
+    fs.readFileSync(
+      path.join(__dirname, `data/${year}/breakdown.json`),
+      'utf-8'
+    )
+  );
+
+  res.status(200).set('Content-Type', 'application/json').send(fileData);
 });
 
 console.log(`Running on port ${PORT}`);
