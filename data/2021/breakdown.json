@@ -1,17 +1,96 @@
 {
   "totalParcels": 233950,
-  "outOfStateAndTrustAndLLCAndMultiParcelOwner": 0,
-  "inStateAndTrustAndLLCAndMultiParcelOwner": 199,
-  "outOfStateAndLLCAndMultiParcelOwner": 1469,
-  "inStateAndLLCAndMultiParcelOwner": 9129,
-  "outOfStateAndTrustAndMultiParcelOwner": 340,
-  "inStateAndTrustAndMultiParcelOwner": 2423,
-  "outOfStateAndTrustAndLLC": 5,
-  "inStateAndTrustAndLLC": 22,
-  "outOfStateAndTrust": 1076,
-  "inStateAndTrust": 8672,
-  "outOfStateAndLLC": 1353,
-  "inStateAndLLC": 9687,
-  "outOfStateAndMultiParcelOwner": 3574,
-  "inStateAndMultiParcelOwner": 34031
+  "data": [
+    {
+      "count": 34031,
+      "isOutOfState": false,
+      "isTrust": false,
+      "isLLC": false,
+      "isMultiParcelOwner": true
+    },
+    {
+      "count": 9687,
+      "isOutOfState": false,
+      "isTrust": false,
+      "isLLC": true,
+      "isMultiParcelOwner": false
+    },
+    {
+      "count": 1353,
+      "isOutOfState": true,
+      "isTrust": false,
+      "isLLC": true,
+      "isMultiParcelOwner": false
+    },
+    {
+      "count": 9129,
+      "isOutOfState": false,
+      "isTrust": false,
+      "isLLC": true,
+      "isMultiParcelOwner": true
+    },
+    {
+      "count": 1469,
+      "isOutOfState": true,
+      "isTrust": false,
+      "isLLC": true,
+      "isMultiParcelOwner": true
+    },
+    {
+      "count": 3574,
+      "isOutOfState": true,
+      "isTrust": false,
+      "isLLC": false,
+      "isMultiParcelOwner": true
+    },
+    {
+      "count": 340,
+      "isOutOfState": true,
+      "isTrust": true,
+      "isLLC": false,
+      "isMultiParcelOwner": true
+    },
+    {
+      "count": 8672,
+      "isOutOfState": false,
+      "isTrust": true,
+      "isLLC": false,
+      "isMultiParcelOwner": false
+    },
+    {
+      "count": 1076,
+      "isOutOfState": true,
+      "isTrust": true,
+      "isLLC": false,
+      "isMultiParcelOwner": false
+    },
+    {
+      "count": 2423,
+      "isOutOfState": false,
+      "isTrust": true,
+      "isLLC": false,
+      "isMultiParcelOwner": true
+    },
+    {
+      "count": 5,
+      "isOutOfState": true,
+      "isTrust": true,
+      "isLLC": true,
+      "isMultiParcelOwner": false
+    },
+    {
+      "count": 22,
+      "isOutOfState": false,
+      "isTrust": true,
+      "isLLC": true,
+      "isMultiParcelOwner": false
+    },
+    {
+      "count": 199,
+      "isOutOfState": false,
+      "isTrust": true,
+      "isLLC": true,
+      "isMultiParcelOwner": true
+    }
+  ]
 }
